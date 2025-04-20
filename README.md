@@ -1,19 +1,21 @@
 # worldtime
 
-🕰️ A Folia-compatible plugin to simulate in-game calendar and timekeeping with real persistence.  
+🕰️ A Folia-compatible plugin to simulate and track in-game calendar progression.  
 📦 Developed for MARVserver.
 
 ---
 
 ## 📝 Overview（概要）
 
-**marvtime** tracks and displays in-game years, months, and days using persistent storage.  
-It supports configurable save-backends (MariaDB or JSON) and multilingual support.
+**worldtime** is a Folia-compatible plugin that tracks and preserves in-game year, month, and day progression.  
+It uses the `Time` value stored in `level.dat` under the world folder, which represents the **total server runtime in ticks**.  
+The date is calculated based on Minecraft’s internal tick system (1 day = 24,000 ticks).  
+Data is persistently stored in **MariaDB** or **JSON**, and the plugin supports **multiple languages**.
 
-Minecraft 内の年・月・日を計測・保持する Folia 対応プラグインです。 
-Minecraft の world フォルダ内の level.dat にある Time（tick）を基準にする
-これは「サーバー全体が稼働していた合計時間（tick単位）」で、日付の進行（例: 1日 = 24000tick）に基づいて計算可能
-MariaDB または JSON に保存可能で、複数言語の表示に対応しています。
+**worldtime** は Minecraft 内の年・月・日を計測・保持する **Folia 対応プラグイン**です。  
+時間の基準としては、`world` フォルダ内の `level.dat` に保存されている `Time`（tick）値を使用します。  
+これは「**サーバーが稼働していた総時間（tick単位）**」であり、1日 = 24,000tick という Minecraft の仕様に基づいて日時を計算します。  
+データは **MariaDB または JSON** に保存でき、**多言語表示**にも対応しています。
 
 > ⚠️ This plugin is provided **as-is**.  
 > No support or bug fixes are guaranteed.
